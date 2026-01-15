@@ -52,6 +52,7 @@ body {
 
 .image-wrapper {
     margin-bottom: 15px;
+    background: url('2dagl4i7dgxa1.jpg') center/cover;
     overflow: hidden;
     border: 1px solid #ddd;
     background-color: #eee;
@@ -61,6 +62,7 @@ body {
 }
 
 .image-wrapper img {
+    background: url('2dagl4i7dgxa1.jpg') center/cover;
     width: 100%;
     height: auto;
     display: block;
@@ -68,10 +70,12 @@ body {
 }
 
 .image-wrapper.small {
+    background: url('2dagl4i7dgxa1.jpg') center/cover;
     height: 70px;
 }
 
 .image-wrapper.large {
+    background: url('2dagl4i7dgxa1.jpg') center/cover;
     height: 300px;
 }
 
