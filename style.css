@@ -5,6 +5,7 @@
 }
 
 body {
+    background: url('2dagl4i7dgxa1.jpg')
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
     padding: 40px;
@@ -33,7 +34,6 @@ body {
     font-size: 1.1em;
 }
 
-/* Cột bên phải (Main Content) - Chiếm 70% */
 .main-content {
     flex: 70%;
 }
