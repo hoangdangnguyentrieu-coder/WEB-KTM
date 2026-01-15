@@ -1,4 +1,3 @@
-/* Reset căn lề cơ bản */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,20 +8,19 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
     padding: 40px;
-    background-color: #f9f9f9; /* Màu nền nhẹ để nổi bật nội dung */
+    background-color: #f9f9f9;
 }
 
-/* Container chính sử dụng Flexbox */
 .container {
     display: flex;
     max-width: 1000px;
     margin: 0 auto;
-    background-color: #fff; /* Nền trắng cho nội dung */
+    background-color: #fff;
     padding: 20px;
-    gap: 50px; /* Khoảng cách giữa cột trái và cột phải */
+    gap: 50px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
 }
 
-/* Cột bên trái (Sidebar) - Chiếm 30% */
 .sidebar {
     flex: 30%;
     display: flex;
@@ -52,40 +50,43 @@ body {
     font-style: italic;
 }
 
-/* Định dạng các ô giả lập ảnh (Màu xám có hạt như trong hình) */
-.image-placeholder {
-    background-color: #999; /* Màu xám đậm hơn */
-    background-image: linear-gradient(45deg, #888 25%, transparent 25%, transparent 50%, #888 50%, #888 75%, transparent 75%, transparent);
-    background-size: 4px 4px; /* Tạo hiệu ứng nhiễu nhẹ như ảnh in */
-    color: #333;
+.image-wrapper {
+    margin-bottom: 15px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background-color: #eee;
     display: flex;
     align-items: center;
-    padding-left: 15px; /* Chữ "Image" nằm lệch trái như hình */
-    font-weight: bold;
-    border: 1px solid #777;
-    margin-bottom: 15px;
+    justify-content: center;
 }
 
-.small {
+.image-wrapper img {
     width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.image-wrapper.small {
     height: 70px;
 }
 
-.large {
-    width: 100%;
+.image-wrapper.large {
     height: 300px;
 }
 
-/* Khoảng cách giữa các đoạn văn */
 p {
     margin-bottom: 15px;
-    text-align: justify; /* Căn lề đều hai bên cho chuyên nghiệp */
+    text-align: justify;
 }
 
-/* Responsive: Tự động xếp chồng khi màn hình nhỏ */
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
         padding: 10px;
+        gap: 20px;
+    }
+    .image-wrapper.small, .image-wrapper.large {
+        height: 200px;
     }
 }
